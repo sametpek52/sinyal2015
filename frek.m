@@ -1,14 +1,14 @@
-function[frek] = frek(nota,oktav=4)
+ï»¿function[frek] = frek(nota,oktav=4)
     
-    ilkLa = 27.50; %%La notasýnýn 0. oktavdaki deðeri
+    ilkLa = 27.50; %%La notasÃ½nÃ½n 0. oktavdaki deÃ°eri
     
-    %%Diðer notalarda iþlem tekrarlanmamasý için istenilen oktavdaki La
-    %%notasýnýn deðeri
+    %%DiÃ°er notalarda iÃ¾lem tekrarlanmamasÃ½ iÃ§in istenilen oktavdaki La
+    %%notasÃ½nÃ½n deÃ°eri
     oktavLa = ilkLa*(2^oktav);
     
     
-    %%    Her bir notanýn frekansýnýn do notasýnýn frekansýna bölümünde notaya has sabit bir oran gelmektedir.
-    %%    Bu oranlar notalara göre aþaðýda listelenmektedir
+    %%    Her bir notanÃ½n frekansÃ½nÃ½n do notasÃ½nÃ½n frekansÃ½na bÃ¶lÃ¼mÃ¼nde notaya has sabit bir oran gelmektedir.
+    %%    Bu oranlar notalara gÃ¶re aÃ¾aÃ°Ã½da listelenmektedir
         
 
     oranDo = 0.594;
@@ -19,7 +19,7 @@ function[frek] = frek(nota,oktav=4)
     oranLa = 1;
     oranSi = 1.122;
     
-    switch nota %%Burada girilen nota iþleme uðrar.
+    switch nota %%Burada girilen nota iÃ¾leme uÃ°rar.
     
         case "Do"
             frek = oktavLa*oranDo;    
@@ -48,8 +48,79 @@ function[frek] = frek(nota,oktav=4)
         case "Si"
             frek = oktavLa*oranSi;
         break
+
+             frek = oktavDo*oranSi;
+          break
+          
+         %%ÃœÃ§Ã¼ncÃ¼ hafta gÃ¼ncelleme notalarÄ±n diyezleri
+        
+        %% Diyez
+         case "Dod"
+             frek = oktavDo*oranDo*2;
+         break
+         
+         case "Red"
+             frek = oktavDo*oranRe*2;
+         break
+         
+         case "Mid"
+             frek = oktavDo*oranMi*2;
+         break
+         
+         case "Fad"
+             frek = oktavDo*oranFa*2;
+         break
+         
+         case "Sold"
+             frek = oktavDo*oranSol*2;
+         break
+         
+         case "Lad"
+             frek = oktavDo*oranLa*2;
+         break
+         
+         case "Sid"
+             frek = oktavDo*oranSi*2;
+         break
+         
+         %%ÃœÃ¼Ã§Ã¼ncÃ¼ hafta notalarÄ±n bemolleri 
+         
+         %% Bemol
+         case "Dob"
+             frek = oktavDo*oranDo/2;    
+         break
+         
+         case "Reb"
+             frek = oktavDo*oranRe/2;
+         break
+         
+         case "Mib"
+             frek = oktavDo*oranMi/2;
+         break
+         
+         case "Fab"
+             frek = oktavDo*oranFa/2;
+         break
+         
+         case "Solb"
+             frek = oktavDo*oranSol/2;
+         break
+         
+         case "Lab"
+             frek = oktavDo*oranLa/2;
+         break
+         
+         case "Sib"
+             frek = oktavDo*oranSi/2;
+         break
+         
+         %%
+         case "sus"
+             frek = 0;
+         break
+         
         
         otherwise
-            disp("Yanlýþ nota girildi.")
+            disp("YanlÄ±ÅŸ nota girildi.")
         break
     end
