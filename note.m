@@ -1,6 +1,6 @@
 function [xx,tt] = note(frek,dur,fs=8192)
     
-    %% "fs" periyot başına istenilen örnek sayısı
+    %% "fs" bir periyotta gerekli olan örnek sayisi
 
     tt = 0:1/fs:(dur-1/fs); %% time
     
