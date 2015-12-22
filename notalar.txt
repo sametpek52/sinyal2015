@@ -1,78 +1,78 @@
 Ölçü 1:
-Durma 1/2
-mi    1/2
-la    1/2
-si    1/2
+Durma,, 1/2
+mi    4, 1/2
+la    4,1/2
+si    4,1/2
 
 Ölçü 2:
-do    1/2
-la    1/2
-la     1
+do    5,1/2
+la    4,1/2
+la    4,1
 
 Ölçü 3:
-Durma 1/2
-mi    1/2
-la    1/2
-si    1/2
+Durma ,,1/2
+mi    4,1/2
+la    4,1/2
+si    4,1/2
 
 Ölçü 4:
-do    1/2
-la    1/2
-la     1
+do    5,1/2
+la    4,1/2
+la    4,1
 
 Ölçü 5:
-Durma 1/2
-mi    1/2
-la    1/2
-si    1/2
+Durma ,,1/2
+mi    4,1/2
+la    4,1/2
+si    4,1/2
 
 Ölçü 6:
-do    1
-si    1/2
-la    1/2
+do    5,1
+si    4,1/2
+la    4,1/2
 
 Ölçü 7:
-mi     1
-mi     1
+mi     5,1
+mi     5,1
 
 Ölçü 8:
-mi    1/2
-mi    1/2
-re    1/2
-mi    1/2
+mi    5,1/2
+mi    5,1/2
+re    5,1/2
+mi    5,1/2
 
 Ölçü 9:
-fa    1/2
-fa    1/2 
-fa     1
+fa    5,1/2
+fa    5,1/2 
+fa    5,1
 
 Ölçü 10:
-Durma  1/2
-fa     1/2
-mi     1/2
-re     1/2
+Durma ,,1/2
+fa     5,1/2
+mi     5,1/2
+re     5,1/2
 
 Ölçü 11:
-mi    1/2
-mi    1/2
-mi     1
+mi    5,1/2
+mi    5,1/2
+mi    5,1
 
 Ölçü 12:
-Durma 1/2
-re    1/2
-re    1/2
-re    1/2
+Durma ,,1/2
+re    5,1/2
+re    5,1/2
+re    5,1/2
 
 Ölçü 13:
-si     1
-mi     1
+si     4,1
+mi     5,1
 
 Ölçü 14:
-do     1
-si     1
+do     5,1
+si     4,1
 
 Ölçü 15:
-mi     2
+mi    5,2
 
 Ölçü 16:
-la     2
+la     4,2
