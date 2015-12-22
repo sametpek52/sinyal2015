@@ -5,7 +5,7 @@ function [xx,tt] = note(frek,dur,fs=8192)
     tt = 0:1/fs:(dur-1/fs); %% time
     
     %%zarf ta gerekli olanlar
-    elemanSayi = length(tt); %% Eleman sayýsý
+    elemanSayi = length(tt); %% Eleman sayisi
     
     attack = linspace(0,1.5,(elemanSayi*2/8));
     
@@ -17,6 +17,6 @@ function [xx,tt] = note(frek,dur,fs=8192)
     
     zarf = [attack, decay, sustain, relase];
 
-    xx = zarf .* sin(2*pi*frek*tt + zarf); %% zarf ile sinüs sonuçlarý
+    xx = zarf .* sin(2*pi*frek*tt + zarf); %% zarf ile sinüs sonuçlari
 
     
