@@ -16,7 +16,15 @@ function [xx,tt] = note(frek,dur,fs=8192)
     relase = linspace(1-(1/(elemanSayi/8)),0,(elemanSayi/8));
     
     zarf = [attack, decay, sustain, relase];
-
-    xx = zarf .* sin(2*pi*frek*tt + zarf); %% zarf ile sinüs sonuçlari
+    h_k= [1,0.8,0.4,0,1];
+    xx=zeros(1,elemanSayi);
+    i=1;
+    
+    for 1:length(h_k)
+        x=h_k(i)*zarf .* sin(2*pi*frek*tt + zarf)
+        xx=xx + x;
+        i++;
+end
+    
 
     
