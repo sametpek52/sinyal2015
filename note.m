@@ -1,11 +1,13 @@
-function [xx,tt] = note(frek,dur,fs=8192)
+function [xx,tt] = note(frek,dur)
     
-    %% "fs" bir periyotta gerekli olan örnek sayisi
+    %% "fs" periyot baþýna istenilen örnek sayýsý
 
-    tt = 0:1/fs:(dur-1/fs); %% time
+    fs=8192;
     
-    %%zarf ta gerekli olanlar
-    elemanSayi = length(tt); %% Eleman sayisi
+    
+    tt = 0:1/fs:(dur-1/fs); %% time
+    %%zarf için gerekli olanlar
+    elemanSayi = length(tt); %% Eleman sayýsý
     
     attack = linspace(0,1.5,(elemanSayi*2/8));
     
@@ -16,15 +18,19 @@ function [xx,tt] = note(frek,dur,fs=8192)
     relase = linspace(1-(1/(elemanSayi/8)),0,(elemanSayi/8));
     
     zarf = [attack, decay, sustain, relase];
-    h_k= [1,0.8,0.4,0,1];
-    xx=zeros(1,elemanSayi);
-    i=1;
-    
-    for 1:length(h_k)
-        x=h_k(i)*zarf .* sin(2*pi*frek*tt + zarf)
-        xx=xx + x;
-        i++;
-end
-    
+
+     h_k = [1, 0.8, 0.4, 0.1];
+
+     xx = zeros(1,elemanSayi);
+
+     
+     for i=1:length(h_k)
+        x = h_k(i).*zarf .* sin(2*pi*frek*tt);
+
+        xx = xx + x;
+
+        i = i+1;
+        
+     end
 
     
