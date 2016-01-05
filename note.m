@@ -1,12 +1,13 @@
+%% MATLAB SENTEZLEME 
+%%
+%% Note.m Dosyasý
+%%
+%%
 function [xx,tt] = note(frek,dur)
-    
-    %% "fs" periyot baþýna istenilen örnek sayýsý
 
-    fs=8192;
-    
-    
-    tt = 0:1/fs:(dur-1/fs); %% time
-    %%zarf için gerekli olanlar
+    fs=8192; % "fs" periyot baþýna istenilen örnek sayýsý
+    tt = 0:1/fs:(dur-1/fs); % time
+    %zarf için gerekli olanlar
     elemanSayi = length(tt); %% Eleman sayýsý
     
     attack = linspace(0,1.5,(elemanSayi*2/8));
@@ -23,14 +24,16 @@ function [xx,tt] = note(frek,dur)
 
      xx = zeros(1,elemanSayi);
 
-     
+    %% 
      for i=1:length(h_k)
-        x = h_k(i).*zarf .* sin(2*pi*frek*tt);
+        x = h_k(i).*zarf .* sin(2*pi*i*frek*tt);
 
         xx = xx + x;
 
-        i = i+1;
         
      end
-
+     %%
+    %% 
+    xx=xx.*zarf;
     
+    %%
